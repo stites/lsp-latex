@@ -783,9 +783,9 @@ should be vector."
   (interactive)
   (lsp-register-custom-settings
    `(("texlab.rootDirectory" lsp-latex-root-directory)
+     ("texlab.auxDirectory" lsp-latex-build-aux-directory)
      ("texlab.build.executable" lsp-latex-build-executable)
      ("texlab.build.args" ,(apply-partially #'lsp-latex--getter-vectorize-list 'lsp-latex-build-args))
-     ("texlab.build.outputDirectory" lsp-latex-build-aux-directory)
      ("texlab.build.forwardSearchAfter" lsp-latex-build-forward-search-after t)
      ("texlab.build.onSave" lsp-latex-build-on-save t)
      ("texlab.forwardSearch.executable" lsp-latex-forward-search-executable)
